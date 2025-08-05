@@ -91,6 +91,21 @@ Create or update preferences for a user.
     "notifications": true
   }
 }
+
+#### Example in Python:
+
+```python
+import requests
+
+data = {
+    "userId": "user123",
+    "preferences": {
+        "theme": "dark",
+        "notifications": True
+    }
+}
+response = requests.post("http://localhost:3000/preferences", json=data)
+print(response.json())
 ```
 #### Example:
 
@@ -107,22 +122,6 @@ def save_preferences(user_id, preferences):
         print(json.dumps(response.json(), indent=2))
     else:
         print("Error:", response.text)
-```
-
-#### Example in Python:
-
-```python
-import requests
-
-data = {
-    "userId": "user123",
-    "preferences": {
-        "theme": "dark",
-        "notifications": True
-    }
-}
-response = requests.post("http://localhost:3000/preferences", json=data)
-print(response.json())
 ```
 
 ---
