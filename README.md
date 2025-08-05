@@ -107,24 +107,6 @@ data = {
 response = requests.post("http://localhost:3000/preferences", json=data)
 print(response.json())
 ```
-#### Example:
-
-```python
-def save_preferences(user_id, preferences):
-    url = f"http://localhost:3000/preferences"
-    content = {
-        "userId": user_id,
-        "preferences": preferences
-    }
-    response = requests.post(url, json=content)
-    if response.ok:
-        print("Preferences saved!")
-        print(json.dumps(response.json(), indent=2))
-    else:
-        print("Error:", response.text)
-```
-
----
 
 ### `GET /preferences/:userId`
 
