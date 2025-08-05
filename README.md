@@ -152,6 +152,10 @@ print(response.json())
 
 ---
 
+## UML Sequence Diagram
+<img width="1039" height="1068" alt="image" src="https://github.com/user-attachments/assets/33dabeff-f4b5-4eee-a8f4-ccf5e269b49f" />
+
+---
 ## Notes
 
 * All requests must be sent as JSON with the appropriate HTTP method (`POST`, `GET`, `DELETE`).
