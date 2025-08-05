@@ -91,6 +91,7 @@ Create or update preferences for a user.
     "notifications": true
   }
 }
+```
 
 #### Example in Python:
 
