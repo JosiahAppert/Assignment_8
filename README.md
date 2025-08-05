@@ -1,48 +1,59 @@
 # User Preferences Microservice
 
-This project provides a simple User Preferences Microservice built with Node.js, Express, and MongoDB.
+This project provides a simple **User Preferences Microservice** built with **Node.js**, **Express**, and **MongoDB**, along with a **Python client** for interacting with it via a command-line interface.
 
-# Features
+---
+
+## Features
 
 * Save or update user preferences (theme, notifications, etc.)
 * Retrieve user preferences by user ID
-* Delete user preferences by user ID
+* Delete user preferences
+* Simple Python client to interact with the service
 
-# Project Structure
+---
 
+## Project Structure
+
+```
 .
 ├── models/
 │   └── UserPreference.js       # Mongoose schema for user preferences
 ├── server.js                   # Express server exposing RESTful endpoints
-├── .env                        # Environment configuration, instructions to create below
+├── .env                        # Environment configuration
 ├── package.json                # Node.js project metadata and dependencies
 └── README.md                   # Project documentation
+```
 
-# Getting Started
+---
 
-# Prerequisites
+## Getting Started
+
+### Prerequisites
 
 * [Node.js](https://nodejs.org/)
 * [MongoDB Atlas account](https://www.mongodb.com/cloud/atlas) or local MongoDB server
 * [Python 3.x](https://www.python.org/)
 * [pip](https://pip.pypa.io/en/stable/installation/)
 
-# Running the Microservice
+---
 
-# 1. Clone the Repository
+## Running the Microservice
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/JosiahAppert/Assignment_8.git
-cd user-preferences-service
+cd Assignment_8
 ```
 
-# 2. Install Dependencies
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-# 3. Configure Environment
+### 3. Configure Environment
 
 Create a `.env` file with the following:
 
@@ -53,21 +64,23 @@ PORT=3000
 
 > Replace `<userid>` and `<password>` with your MongoDB Atlas credentials.
 
-# 4. Start the Server
+### 4. Start the Server
 
 ```bash
 npm start
 ```
 
-The server will run on http://localhost:3000.
+The server will run on [http://localhost:3000](http://localhost:3000).
 
-# API Endpoints
+---
 
-# `POST /preferences`
+## API Endpoints
+
+### `POST /preferences`
 
 Create or update preferences for a user.
 
-# Request Body:
+#### Request Body:
 
 ```json
 {
@@ -79,21 +92,33 @@ Create or update preferences for a user.
 }
 ```
 
-# `GET /preferences/:userId`
+---
+
+### `GET /preferences/:userId`
+
 Retrieve preferences for a user.
-# Example:
+
+#### Example:
+
 ```bash
 GET /preferences/user123
 ```
 
-# `DELETE /preferences/:userId`
+---
+
+### `DELETE /preferences/:userId`
+
 Delete preferences for a user.
-# Example:
+
+#### Example:
+
 ```bash
 DELETE /preferences/user123
 ```
 
-# Mongoose Schema
+---
+
+## Mongoose Schema
 
 ```js
 {
@@ -101,3 +126,5 @@ DELETE /preferences/user123
   preferences: { type: Object, default: {} }
 }
 ```
+
+---
