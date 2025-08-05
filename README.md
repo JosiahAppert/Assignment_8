@@ -91,6 +91,22 @@ Create or update preferences for a user.
   }
 }
 ```
+#### Example:
+
+```python
+def save_preferences(user_id, preferences):
+    url = f"http://localhost:3000/preferences"
+    content = {
+        "userId": user_id,
+        "preferences": preferences
+    }
+    response = requests.post(url, json=content)
+    if response.ok:
+        print("Preferences saved!")
+        print(json.dumps(response.json(), indent=2))
+    else:
+        print("Error:", response.text)
+```
 
 ---
 
@@ -100,8 +116,15 @@ Retrieve preferences for a user.
 
 #### Example:
 
-```bash
-GET /preferences/user123
+```python
+def get_preferences(user_id):
+    url = f"http://localhost:3000/preferences/{user_id}"
+    response = requests.get(url)
+    if response.ok:
+        print("Preferences retrieved:")
+        print(json.dumps(response.json(), indent=2))
+    else:
+        print("Error:", response.text)
 ```
 
 ---
@@ -112,8 +135,14 @@ Delete preferences for a user.
 
 #### Example:
 
-```bash
-DELETE /preferences/user123
+```python
+def delete_preferences(user_id):
+    url = f"http://localhost:3000/preferences/{user_id}"
+    response = requests.delete(url)
+    if response.ok:
+        print("Preferences deleted!")
+    else:
+        print("Error:", response.text)
 ```
 
 ---
