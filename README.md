@@ -153,7 +153,7 @@ print(response.json())
 ---
 
 ## UML Sequence Diagram
-<img width="739" height="768" alt="image" src="https://github.com/user-attachments/assets/33dabeff-f4b5-4eee-a8f4-ccf5e269b49f" />
+<img width="709" height="738" alt="image" src="https://github.com/user-attachments/assets/33dabeff-f4b5-4eee-a8f4-ccf5e269b49f" />
 
 ---
 ## Notes
